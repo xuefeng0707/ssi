@@ -5,15 +5,22 @@
 	<artifactId>ssi</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
 	<packaging>war</packaging>
-	
+
 	<properties>
 		<aspectjweaver.version>1.8.5</aspectjweaver.version>
+		<c3p0.version>0.9.1.2</c3p0.version>
+		<commons-lang.version>2.6</commons-lang.version>
+		<fastjson.version>1.2.7</fastjson.version>
+		<junit.version>4.12</junit.version>
 		<log4j.version>1.2.16</log4j.version>
+		<mybatis.version>3.2.8</mybatis.version>
+		<mybatis-spring.version>1.2.2</mybatis-spring.version>
+		<mysql-connector.version>5.1.38</mysql-connector.version>
 		<slf4j.version>1.7.13</slf4j.version>
 		<servlet-api.version>2.5</servlet-api.version>
 		<spring.version>4.2.5.RELEASE</spring.version>
 	</properties>
-	
+
 	<dependencies>
 		<!-- aop相关jar -->
 		<dependency>
@@ -21,7 +28,25 @@
 			<artifactId>aspectjweaver</artifactId>
 			<version>${aspectjweaver.version}</version>
 		</dependency>
+
+		<!-- c3p0相关jar -->
+		<dependency>
+			<groupId>c3p0</groupId>
+			<artifactId>c3p0</artifactId>
+			<version>${c3p0.version}</version>
+		</dependency>
 		
+		<dependency>
+			<groupId>commons-lang</groupId>
+			<artifactId>commons-lang</artifactId>
+			<version>${commons-lang.version}</version>
+		</dependency>
+		<dependency>
+			<groupId>com.alibaba</groupId>
+			<artifactId>fastjson</artifactId>
+			<version>${fastjson.version}</version>
+		</dependency>
+
 		<!-- servlet-api不需要打包 -->
 		<dependency>
 			<groupId>javax.servlet</groupId>
@@ -29,7 +54,14 @@
 			<version>${servlet-api.version}</version>
 			<scope>provided</scope>
 		</dependency>
-		
+
+		<!-- junit相关jar -->
+		<dependency>
+			<groupId>junit</groupId>
+			<artifactId>junit</artifactId>
+			<version>${junit.version}</version>
+		</dependency>
+
 		<!-- log4j相关jar -->
 		<dependency>
 			<groupId>log4j</groupId>
@@ -41,7 +73,24 @@
 			<artifactId>slf4j-api</artifactId>
 			<version>${slf4j.version}</version>
 		</dependency>
-		
+
+		<!-- mybatis、mysql相关jar -->
+		<dependency>
+			<groupId>org.mybatis</groupId>
+			<artifactId>mybatis</artifactId>
+			<version>${mybatis.version}</version>
+		</dependency>
+		<dependency>
+			<groupId>mysql</groupId>
+			<artifactId>mysql-connector-java</artifactId>
+			<version>${mysql-connector.version}</version>
+		</dependency>
+		<dependency>
+			<groupId>org.mybatis</groupId>
+			<artifactId>mybatis-spring</artifactId>
+			<version>${mybatis-spring.version}</version>
+		</dependency>
+
 		<!-- spring相关jar -->
 		<dependency>
 			<groupId>org.springframework</groupId>
@@ -69,7 +118,7 @@
 			<version>${spring.version}</version>
 		</dependency>
 	</dependencies>
-	
+
 	<build>
 		<finalName>ssi</finalName>
 		<plugins>
